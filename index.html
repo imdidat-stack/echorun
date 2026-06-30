@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Echo — Swipe Now, Move Later | A one-tap cube runner</title>
+  <meta name="description" content="Echo is a premium one-tap cube runner with a twist: every move lands after a growing ECHO delay. Read the road, time the signal, and survive five shifting voxel worlds." />
+  <meta name="theme-color" content="#0a0b12" />
+  <link rel="canonical" href="/" />
+
+  <!-- Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Echo — Swipe Now, Move Later" />
+  <meta property="og:description" content="A one-tap cube runner where every move lands after a growing delay. Predict the road. Master the echo." />
+  <meta property="og:image" content="assets/img/hero-gold.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+  <!-- Fonts -->
+  <style>
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('fonts/SF-Pro.woff2') format('woff2'),
+           url('fonts/SF-Pro.woff') format('woff');
+      font-weight: 400 900;
+      font-display: swap;
+    }
+    :root {
+      --font-sans: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand-mark" href="index.html" aria-label="Echo home">
+        <img src="assets/img/logo.png" alt="" />
+        <b>ECHO</b>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn nav-cta" href="https://apps.apple.com/us/app/echo-swipe-now-move-later/id6779810863" target="_blank" rel="noopener">Play Free</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="dot"></span>One-tap reflex runner</span>
+          <h1 class="wordmark">ECHO</h1>
+          <p class="tagline">Swipe now · Move later</p>
+          <p class="lead">Your move never happens right away. Every swipe sends a <strong>signal</strong> that fires after the current <strong>echo delay</strong> — one second at first, then two, then three. Read the road ahead, count the beat, and commit early.</p>
+          <div class="hero-cta">
+            <a class="btn" href="https://apps.apple.com/us/app/echo-swipe-now-move-later/id6779810863" target="_blank" rel="noopener">Download Free</a>
+          </div>
+          <p class="hero-note">Free to play · iPhone & iPad · No account required to start</p>
+        </div>
+
+        <div class="hero-stage">
+          <div class="cubes" aria-hidden="true">
+            <div class="cube" style="--h:18px;--c:var(--brand);width:36px;height:36px;top:8%;left:4%;animation-duration:16s;">
+              <span class="face f-front"></span><span class="face f-back"></span><span class="face f-right"></span><span class="face f-left"></span><span class="face f-top"></span><span class="face f-bottom"></span>
+            </div>
+            <div class="cube" style="--h:13px;--c:var(--sky);width:26px;height:26px;top:18%;right:6%;animation-duration:22s;">
+              <span class="face f-front"></span><span class="face f-back"></span><span class="face f-right"></span><span class="face f-left"></span><span class="face f-top"></span><span class="face f-bottom"></span>
+            </div>
+            <div class="cube" style="--h:16px;--c:var(--gold);width:32px;height:32px;bottom:10%;left:2%;animation-duration:19s;">
+              <span class="face f-front"></span><span class="face f-back"></span><span class="face f-right"></span><span class="face f-left"></span><span class="face f-top"></span><span class="face f-bottom"></span>
+            </div>
+            <div class="cube" style="--h:11px;--c:var(--lilac);width:22px;height:22px;bottom:18%;right:10%;animation-duration:24s;">
+              <span class="face f-front"></span><span class="face f-back"></span><span class="face f-right"></span><span class="face f-left"></span><span class="face f-top"></span><span class="face f-bottom"></span>
+            </div>
+          </div>
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="ping-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+          <img class="hero-hero-img" src="assets/img/hero-gold.png" width="360" height="360" alt="Echo's golden cube hero" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span>What's inside</span>
+          <h2 class="section-title">Built to be played for hours</h2>
+          <p class="lead">A tiny idea with deep mastery — wrapped in a hand-crafted voxel world that's generated fresh on every run.</p>
+        </div>
+        <div class="features-grid">
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--brand)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+            <h3>Delayed-input mastery</h3>
+            <p>The signature echo mechanic turns a one-tap runner into a game of pure foresight. Easy to learn, a lifetime to master.</p>
+          </article>
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--sky)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 8c-2.8 0-2.8 8 0 8s5-8 10-8 2.8 8 0 8-7-8-10-8Z"/></svg></span>
+            <h3>Endless, escalating runs</h3>
+            <p>Survive as long as you can while the echo climbs and the pace builds through distinct difficulty phases.</p>
+          </article>
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--gold)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7Zm0 2.3 6.5 3.6L12 11.5 5.5 7.9Z"/></svg></span>
+            <h3>Five shifting worlds</h3>
+            <p>Race through Green Hollow, Stone Ruins, Ice Wastes, Crystal Depths and Dungeon Dark — each with its own mood and palette.</p>
+          </article>
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--green)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v3a5 5 0 0 1-4 4.9A4 4 0 0 1 13 15v2h3v2H8v-2h3v-2a4 4 0 0 1-3-3.1A5 5 0 0 1 4 7Z"/></svg></span>
+            <h3>Global leaderboard</h3>
+            <p>Sign in with Apple to claim your spot, chase the top ranks worldwide, and check out other players' profiles.</p>
+          </article>
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--lilac)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a6 6 0 0 1 6 6 6 6 0 0 1-3 5.2V22l-3-2-3 2v-8.8A6 6 0 0 1 6 8a6 6 0 0 1 6-6Z"/></svg></span>
+            <h3>Collect cube heroes</h3>
+            <p>Spend the acorns you earn on a cast of fully animated voxel characters — from a brave Block Hero to a legendary Cube Mage.</p>
+          </article>
+          <article class="glass feature-card reveal">
+            <span class="tile" style="--c:var(--orange)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 12h3l2-6 4 14 3-9 2 4h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+            <h3>All art &amp; sound generated live</h3>
+            <p>Every world, effect and note is created procedurally at runtime — buttery 60fps game-feel with slow-mo, hit-stop and haptics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section style="padding-block:0">
+      <div class="wrap">
+        <div class="glass stats reveal">
+          <div class="stat"><b>5</b><span>Living worlds</span></div>
+          <div class="stat"><b>&infin;</b><span>Endless mode</span></div>
+          <div class="stat"><b>60</b><span>Frames / second</span></div>
+          <div class="stat"><b>14+</b><span>Achievements</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DOWNLOAD CTA ===================== -->
+    <section id="download">
+      <div class="wrap">
+        <div class="glass cta-band reveal">
+          <span class="eyebrow"><span class="dot"></span>Ready when you are</span>
+          <h2>Can you master the echo?</h2>
+          <p class="lead center" style="margin-top:1rem">Download Echo free and find out how far ahead you can really think.</p>
+          <div class="stores" style="display: flex; justify-content: center;">
+            <a class="store" href="https://apps.apple.com/us/app/echo-swipe-now-move-later/id6779810863" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.7 2.3 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7 1.9-1.1 2.6-2.2c.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.6zM14.2 5.6c.6-.7 1-1.8.9-2.8-.9 0-2 .6-2.6 1.4-.6.6-1.1 1.7-1 2.7 1 .1 2-.6 2.7-1.3z"/></svg>
+              <span class="store-text"><small>Download on the</small><b>App Store</b></span>
+            </a>
+          </div>
+          <p class="hero-note">Available now on the App Store.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-mark" href="index.html" aria-label="Echo home"><img src="assets/img/logo.png" alt="" /><b>ECHO</b></a>
+          <p>A one-tap cube runner built around a single twist: your move always lands a beat later. Tap now, move later.</p>
+        </div>
+        <div>
+          <h4>Game</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="mailto:contact@taphey.app">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Echo. All rights reserved.</span>
+        <span>Tap now · Move later.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
