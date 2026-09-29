@@ -46,6 +46,25 @@
   window.addEventListener('scroll', onScroll, {passive: true});
   onScroll();
 
+  // ---------- Phone menu ----------
+  const menuButton = document.querySelector('.menu-button');
+  const mobileNav = document.getElementById('mobile-nav');
+  function setMenu(open) {
+    if (!menuButton || !mobileNav) return;
+    mobileNav.hidden = !open;
+    menuButton.setAttribute('aria-expanded', String(open));
+    header.classList.toggle('menu-open', open);
+  }
+  if (menuButton && mobileNav) {
+    menuButton.addEventListener('click', () => setMenu(mobileNav.hidden));
+    mobileNav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileNav.hidden) { setMenu(false); menuButton.focus(); }
+    });
+    // Close it when the screen grows past the phone layout.
+    window.matchMedia('(min-width: 721px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+  }
+
   // ---------- Role tabs (ARIA tabs, arrow keys follow reading direction) ----------
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   function select(tab, focus) {
